@@ -45,27 +45,27 @@ public class operation {
     	}
 
 
-    String reduceOperator(String equation) {
-        String myResult = '';
+    public String reduceOperator(String equation) {
+        String myResult = ""; 
         for (int i = 0; i < equation.length(); i++ ) {
-            if (isOperand(equation.charAt(1)) {
+            if (isOperand(equation.charAt(1))) {
                 myResult = myResult + equation.charAt(1);
             }
-            if (isParentesis(equation.charAt(1)) {
+            if (isParentesis(equation.charAt(1))) {
                 myResult = myResult + equation.charAt(1);
             }
-            if (isOperator(equation.charAt(1)) {
+            if (isOperator(equation.charAt(1))) {
                 if (isPlusOrMinus(equation.charAt(1))) {
-                    if (isPlus(myResult.charAt(myResult.length() - 1)) && isMinus(equation.charAt(i)) {
+                    if (isPlus(myResult.charAt(myResult.length() - 1)) && isMinus(equation.charAt(i))) {
                         myResult = myResult.substring(0, myResult.length() - 2);
                         myResult = myResult + '-';
-                    } else if (isPlus(myResult.charAt(myResult.length() - 1)) && isPlus(equation.charAt(i)) {
+                    } else if (isPlus(myResult.charAt(myResult.length() - 1)) && isPlus(equation.charAt(i))) {
                         myResult = myResult.substring(0, myResult.length() - 2);
                         myResult = myResult + '+';
-                    } else if (isMinus(myResult.charAt(myResult.length() - 1)) && isMinus(equation.charAt(i)) {
+                    } else if (isMinus(myResult.charAt(myResult.length() - 1)) && isMinus(equation.charAt(i))) {
                         myResult = myResult.substring(0, myResult.length() - 2);
                         myResult = myResult + '+';
-                    } else if (isMinus(myResult.charAt(myResult.length() - 1)) && isPlus(equation.charAt(i)) {
+                    } else if (isMinus(myResult.charAt(myResult.length() - 1)) && isPlus(equation.charAt(i))) {
                         myResult = myResult.substring(0, myResult.length() - 2);
                         myResult = myResult + '-';
                     } else {
