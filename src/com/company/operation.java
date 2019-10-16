@@ -14,6 +14,13 @@ public class operation {
 
     public String equation;
 
+    public operation(String eq){
+        equation = eq;
+    }
+    float operate(){
+                return operatePostfix(ToPostfixed(reduceOperator(equation)));
+    }
+
     public String ToPostfixed (String Infix) {
         String Postfixed = "";
 
