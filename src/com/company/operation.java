@@ -1,4 +1,5 @@
 package com.company;
+import java.lang.Math;
 
 public class operation {
     public int precedence (char myChar){
@@ -45,5 +46,22 @@ public class operation {
     }
     boolean isMult(char myChar){
         return  myChar == '*';
+    }
+
+    float operates(float first,float second, char op){
+        switch (op){
+            case '+':
+                return first + second;
+            case '-':
+                return first - second;
+            case '*':
+                return first * second;
+            case '/':
+                return first / second;
+            case '^':
+                return (float) Math.pow(first,second);
+            default:
+                return 0;
+        }
     }
 }
