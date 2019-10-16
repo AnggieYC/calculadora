@@ -10,6 +10,18 @@ public class operation {
         	else return 0;
 	}
 
+    boolean isOperand(char myChar){
+        if (myChar>='0' && myChar<='9') return true;
+        else if (myChar>='a' && myChar<='z') return true;
+        else if (myChar>='A' && myChar<='Z') return true;
+        return false;
+    }
+    boolean isVariable(char myChar){
+        if (myChar>='a' && myChar<='z') return true;
+        else if (myChar>='A' && myChar<='Z') return true;
+        return false;
+    }
+
 
 	public boolean isOperator(char myChar) {
 		return myChar == '+' || myChar == '-' || myChar == '*' || myChar == '/' || myChar == '^';
