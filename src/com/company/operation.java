@@ -20,10 +20,27 @@ public class operation {
                 return operatePostfix(ToPostfixed(reduceOperator(equation)));
     }
 
+    private static String depurar(String s) {
+        s = s.replaceAll("\\s+", ""); //Elimina espacios en blanco
+        s = "(" + s + ")";
+        String simbols = "+-*/()";
+        String str = "";
+
+        //Deja espacios entre operadores
+        for (int i = 0; i < s.length(); i++) {
+            if (simbols.contains("" + s.charAt(i))) {
+                str += " " + s.charAt(i) + " ";
+            }else str += s.charAt(i);
+        }
+        return str.replaceAll("\\s+", " ").trim();
+    }
+
     public String ToPostfixed (String Infix) {
         String Postfixed = "";
 
         Infix = reduceOperator(Infix);
+
+        Infix = depurar (Infix);
 
         String[] arrayInfix = Infix.split(" ");
 
