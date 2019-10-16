@@ -77,8 +77,8 @@ public class operation {
             }
 
         }
+        return myResult;
     }
-    return myResult;
 
     float operates(float first,float second, char op){
         switch (op){
