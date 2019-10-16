@@ -7,6 +7,7 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class operation {
+    public String equation;
 
 	public int precedence(char myChar){
 		if(myChar == '^') return 3;
@@ -14,6 +15,7 @@ public class operation {
         	else if(myChar == '+' || myChar == '-') return 1;
         	else return 0;
 	}
+
 
     boolean isOperand(char myChar){
         if (myChar>='0' && myChar<='9') return true;
